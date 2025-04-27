@@ -1,105 +1,104 @@
 # 📊 MiniERP-Lite
 
-**Dashboard Open Source para Pequeños Negocios**
+**Open Source Dashboard for Small Businesses**
 
-MiniERP-Lite es una aplicación de código abierto y bajo consumo diseñada para ayudar a pequeños negocios a visualizar, administrar y analizar su información básica sin necesidad de un ERP costoso o complejo. Este proyecto está pensado para ser **fácil de instalar, modular y educativo**, tanto para dueños de negocio como para desarrolladores.
-
----
-
-## 🚀 Objetivos del proyecto
-
-- Ofrecer una solución liviana y práctica de gestión para pequeños negocios
-- Servir como ejemplo de arquitectura limpia y buenas prácticas en .NET 8
-- Funcionar como proyecto de portafolio técnico, demostrando habilidades backend, frontend y de documentación
-- Promover la colaboración open source
+MiniERP-Lite is an open-source, lightweight application designed to help small businesses visualize, manage, and analyze their basic information without the need for an expensive or complex ERP. This project is designed to be **easy to install, modular, and educational** for both business owners and developers.
 
 ---
 
-## 📦 Tecnologías utilizadas
+## 🚀 Project Goals
+
+- Provide a lightweight and practical management solution for small businesses
+- Serve as an example of clean architecture and best practices in .NET 8
+- Act as a technical portfolio project, demonstrating backend, frontend, and documentation skills
+- Promote open-source collaboration
+
+---
+
+## 📦 Technologies Used
 
 ### Backend
-- [.NET 8 Minimal API (native AOT)](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis)
+- .NET 8 Minimal API
 - ADO.NET + Stored Procedures
-- SQL Server o MySQL
-- JWT para autenticación
+- SQL Server or MySQL
+- JWT for authentication
 
 ### Frontend
 - React.js + Vite
 - TailwindCSS
-- Recharts (visualización)
 - Axios
 
 ---
 
-## 🧩 Módulos principales
+## 🧩 Main Modules
 
-### 🛒 Ventas
-- Registro de ventas por fecha
-- Detalles de productos vendidos
-- Total por día o mes
+### 🛒 Sales
+- Sales records by date
+- Details of sold products
+- Daily or monthly totals
 
-### 📦 Inventario
-- CRUD de productos
-- Alerta de stock bajo
+### 📦 Inventory
+- Product CRUD operations
+- Low stock alerts
 
-### 💰 Finanzas
-- Registro de ingresos y gastos
-- Clasificación por tipo
-- Balance mensual y general
+### 💰 Finance
+- Income and expense tracking
+- Categorization by type
+- Monthly and overall balance
 
-### ✅ Tareas internas
-- Lista de tareas con estado (pendiente, en curso, terminada)
-- Asignación opcional a usuarios
+### ✅ Internal Tasks
+- Task list with status (pending, in progress, completed)
+- Optional user assignment
 
-### 👤 Usuarios y roles
-- Login básico con JWT
-- Roles: `Admin`, `Empleado`
-- Restricción de acceso por módulo
+### 👤 Users and Roles
+- Basic login with JWT
+- Roles: Admin, Employee
+- Module access restriction based on role
 
 ---
 
-## 📁 Estructura del proyecto
+## 📁 Project Structure
 
 ```plaintext
 MiniERP-Lite/
-├── ERP.API         → API REST .NET Minimal con autenticación
-├── ERP.Modelos     → Clases de entidad compartidas
-├── ERP.Datos       → Acceso a BD con ADO.NET y SPs
-├── ERP.Negocio     → Servicios y validaciones de negocio
-├── ERP.Frontend    → React + Tailwind (dashboard responsive)
-├── docs/           → Diagramas y documentación técnica
-└── README.md       → Este archivo
+├── ERP.API         → .NET Minimal REST API with authentication
+├── ERP.Models      → Shared entity classes
+├── ERP.DataAccess  → Database access with ADO.NET and SPs
+├── ERP.Services    → Business services and validations
+├── ERP.Frontend    → React + Tailwind (responsive dashboard)
+├── docs/           →  Diagrams and technical documentation
+└── README.md       → This file
 ```
 ---
 
-## 🗃️ Modelo de base de datos (resumen)
+## 🗃️ Database Model (Summary)
 
-- `Usuario`: Id, Nombre, Rol, Email, Contraseña
-- `Producto`: Id, Nombre, Stock, Precio
-- `Venta`: Id, Fecha, UsuarioId
-- `VentaDetalle`: ProductoId, Cantidad, PrecioUnitario
-- `Movimiento`: Tipo (Ingreso/Gasto), Fecha, Monto
-- `Tarea`: Título, Estado, FechaLimite, AsignadoA
+- ``User``: Id, Name, Role, Email, Password
+- ``Product``: Id, Name, Stock, Price
+- ``Sale``: Id, Date, UserId
+- ``SaleDetail``: ProductId, Quantity, UnitPrice
+- ``Transaction``: Type (Income/Expense), Date, Amount
+- ``Task``: Title, Status, DueDate, AssignedTo
 
-🖼️ Diagrama completo en `/docs/ER.drawio`
+🖼️ Full diagram available at /docs/ER.drawio`
 
 ---
 
 ## 📊 Dashboard (Frontend)
 
-- Gráfico de ventas por mes (Recharts)
-- Gráfico de gastos por tipo
-- Tabla de productos con stock bajo
-- Lista de tareas internas pendientes
+- Monthly sales chart (Recharts)
+- Expenses by type chart
+- Low stock product table
+- Pending internal tasks list
 
 ---
 
-## ⚙️ Cómo correr el proyecto localmente
+## ⚙️ How to Run the Project Locally
 
-**Requisitos**:
+**Requirements**:
 - .NET 8 SDK
 - Node.js + npm
-- SQL Server / MySQL local
+- Local SQL Server / MySQL
 
 ```bash
 git clone https://github.com/tuusuario/MiniERP-Lite.git
@@ -113,40 +112,34 @@ dotnet run
 cd ERP.Frontend
 npm install
 npm run dev
-
-## 🤝 ¿Cómo contribuir?
+```
+## 🤝 How to Contribute
 ¡Toda contribución es bienvenida!
 
-Haz un fork del repositorio
+All contributions are welcome!
 
-Crea tu rama: git checkout -b nueva-funcionalidad
-
-Haz tu commit: git commit -m "Agrega funcionalidad X"
-
-Push a tu rama: git push origin nueva-funcionalidad
-
-Abre un Pull Request
-```
----
-
-## 🪪 Licencia
-Este proyecto está bajo la licencia MIT.
-Podés usarlo libremente para fines educativos o comerciales, siempre que se incluya el crédito correspondiente.
+- Fork the repository
+- Create your branch: ``git checkout -b new-feature``
+- Commit your changes: ``git commit -m "Add feature X"``
+- Push to your branch: ``git push origin new-feature``
+- Open a Pull Request
 
 ---
 
-## 💬 ¿Por qué este proyecto?
-- Este sistema surge como una forma de:
-
-- Aplicar patrones de diseño y arquitectura limpia
-
-- Practicar REST APIs, lógica de negocio, SPs y seguridad
-
-- Ofrecer valor a pequeñas empresas que necesitan soluciones prácticas y open source
-
-- Servir como un proyecto de portafolio realista para desarrolladores que buscan destacarse
+## 🪪 License
+This project is under the MIT license.
+You are free to use it for educational or commercial purposes, as long as appropriate credit is given.
 
 ---
 
-© 2024 Brandon Zamora  
-Licencia MIT — [Ver licencia](LICENSE)
+## 💬 Why This Project?
+- This system was created to:
+- Apply design patterns and clean architecture principles
+- Practice REST APIs, business logic, stored procedures, and security
+- Provide value to small businesses needing practical open-source solutions
+- Serve as a realistic portfolio project for developers looking to stand out
+
+---
+
+© 2025 Brandon Zamora  
+MIT License — [Ver licencia](LICENSE)
