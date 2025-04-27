@@ -46,10 +46,6 @@ MiniERP-Lite is an open-source, lightweight application designed to help small b
 - Categorization by type
 - Monthly and overall balance
 
-### ✅ Internal Tasks
-- Task list with status (pending, in progress, completed)
-- Optional user assignment
-
 ### 👤 Users and Roles
 - Basic login with JWT
 - Roles: Admin, Employee
@@ -78,7 +74,6 @@ MiniERP-Lite/
 - ``Sale``: Id, Date, UserId
 - ``SaleDetail``: ProductId, Quantity, UnitPrice
 - ``Transaction``: Type (Income/Expense), Date, Amount
-- ``Task``: Title, Status, DueDate, AssignedTo
 
 🖼️ Full diagram available at /docs/ER.drawio`
 
@@ -89,7 +84,6 @@ MiniERP-Lite/
 - Monthly sales chart (Recharts)
 - Expenses by type chart
 - Low stock product table
-- Pending internal tasks list
 
 ---
 
