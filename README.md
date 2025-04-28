@@ -48,8 +48,9 @@ MiniERP-Lite is an open-source, lightweight application designed to help small b
 
 ### 👤 Users and Roles
 - Basic login with JWT
-- Roles: Admin, Employee
-- Module access restriction based on role
+- Time Zone Configuration
+- Currency Configuration
+- Language Configuration
 
 ---
 
