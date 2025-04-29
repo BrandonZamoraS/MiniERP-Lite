@@ -46,7 +46,7 @@ MiniERP-Lite is an open-source, lightweight application designed to help small b
 - Categorization by type
 - Monthly and overall balance
 
-### 👤 Users and Roles
+### 👤 Users
 - Basic login with JWT
 - Time Zone Configuration
 - Currency Configuration
